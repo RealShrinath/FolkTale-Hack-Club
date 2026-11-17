@@ -36,14 +36,17 @@ print("You wake up with a sharp pain, laying on a frigid brick floor.  A musty s
 print()
 
 inventory = ""
-
+# This is to keep track of all the progress they have gotten
+steps = ""
 
 # I was stuck on this point for a pretty long time/ was procrastinating this because I wasn't proficient in while loops. I sort of know what to do now.
 
+# I don't know what the limitations are to spaces so the code is a bi t ugly
+# Add step 1 for when they 
 
 while True:
     print("What would you like to do?")
-    Choice_1 = input("Just type: Look up, Look down, Look left, Look right, or look forward to begin. When valid, you may also use the inspect command")
+    Choice_1 = input("Just type: Look up, Look down, Look left, Look right, or look forward to begin. When valid, you may also use the inspect command"),../
 
     if Choice_1 == "Look up":
         print("You look at the tall ceilings, 15 feet above you there is a loose vent. You jump up to check your reach to no avail.")
@@ -57,38 +60,34 @@ while True:
         print("You look down and see a deteriorating floor made of stone bricks.")
     else:
         print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, to execute this command, type \"Inspect\"")
-        for i in range(1):
+
             Choice_2 = input("What would you like to do?")
-
-            if Choice_2 == "Look up":
-                print("You look at the tall ceilings, 15 feet above you there is a loose vent. You jump up to check your reach to no avail.")
-elif Choice_2 == "Look left":
-    print("You look to the left and see a big metal door before you. You don't remember coming through it.")
-elif Choice_2 == "Look right":
-    print("You look to the right and see a mirror above a sink, and notice a pipe attached to the sink")
-elif Choice_2 == "Look forward":
-    print("You look in front of you and wonder why the toilet is so close to the bed. You think to yourself atleast there is a pillow")
-elif Choice_2 == "Look down":
-    print("You look down and see a deteriorating floor made of stone bricks.")
-else:
-    print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, you can say, \"Use bat on baseball\"")
-
-if Choice_1 == "Look up" and Choice_2 == "Inspect vent":
-    print("The vent is too far away to see clearly, it appears to be loose")
-if Choice_1 == "Look left" and Choice_2 == "Inspect door":
-    print("You take a closer look at the door,  it is four inches of solid metal, probably not going to be your best escape route.")
-if Choice_1 == "Look right" and Choice_2 == "Inspect mirror":
-    print("Looking in the mirror you realize it has been a while since you last showered. WAIT What's that you see sticking out of the mirror? You pick up a rusty nail file. You begin to start filing your nails to pass the time")
-if Choice_1 == "Look right" and Choice_2 == "Inspect sink":
-    print("You turn the knobs on the sink, no water comes out.")
-if Choice_1 == "Look right" and Choice_2 == "Inspect pipe":
-    print("There is no waterflow you wonder why noone maintains these facilities.")
-if Choice_1 == "Look Forward" and Choice_2 == "Inspect toilet":
-    print("You try to flush the toilet nothing happens.")
-if Choice_1 == "Look Forward" and Choice_2 == "Inspect pillow":
-    print("You lay on the bed and rest your head on the pillow. oww. there was something sharp in there. You remove the pillow case and find a sharp shive inside. You think to yourself that you wouldn't want to get caught with this.")
-if Choice_1 == "Look Forward" and Choice_2 == "Inspect bed":
-    print(" You find a prison outfit under the bed and pick it up. You wonder who's it is")
-if Choice_1 == "Look down" and Choice_2 == "Inspect floor":
-    print("You kneel down and start feeling around the floor for something interesting. You remove a loose brick and to your surprise there is a wrench hidden in there. You decide this could help so you take the wrench and replace the brick.")
-    inventory = inventory + "shiv"
+            if Choice_1 == "Look up" and Choice_2 == "Inspect vent":
+                print("The vent is too far away to see clearly, it appears to be loose")
+            continue
+            if Choice_1 == "Look left" and Choice_2 == "Inspect door":
+                print("You take a closer look at the door,  it is four inches of solid metal, probably not going to be your best escape route.")
+            continue
+            if Choice_1 == "Look right" and Choice_2 == "Inspect mirror":
+                print("Looking in the mirror you realize it has been a while since you last showered. WAIT What's that you see sticking out of the mirror? You pick up a rusty nail file. You begin to start filing your nails to pass the time")
+                inventory = inventory + "nail file"
+                print("You found a nail file! You can use it when the hint to use the nail file appears in the dialogue")
+            if Choice_1 == "Look right" and Choice_2 == "Inspect sink":
+                print("You turn the knobs on the sink, no water comes out.")
+            if Choice_1 == "Look right" and Choice_2 == "Inspect pipe":
+                print("There is no waterflow, you wonder why noone maintains these facilities.")
+            if Choice_1 == "Look Forward" and Choice_2 == "Inspect toilet":
+                print("You try to flush the toilet nothing happens.")
+            if Choice_1 == "Look Forward" and Choice_2 == "Inspect pillow":
+                print("You lay on the bed and rest your head on the pillow. oww. there was something sharp in there. You remove the pillow case and find a sharp shive inside. You think to yourself that you wouldn't want to get caught with this.")
+                inventory = inventory + "shiv"
+                print("You found a shiv! You can use it when the hint to use the shiv appears in the dialogue")
+            if Choice_1 == "Look Forward" and Choice_2 == "Inspect bed":
+                print(" You find a prison outfit under the bed and pick it up. You wonder who's it is")
+                inventory = inventory + "prison outfit"
+                print("You found a prison outfit. You can use it when the hint to use the prison outfit appears in the dialogue")
+            if Choice_1 == "Look down" and Choice_2 == "Inspect floor":
+                print("You kneel down and start feeling around the floor for something interesting. You remove a loose brick and to your surprise there is a wrench hidden in there. You decide this could help so you take the wrench and replace the brick.")
+                inventory = inventory + "shiv"
+            else:
+                print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, you can say, \"Use bat on baseball\"")
