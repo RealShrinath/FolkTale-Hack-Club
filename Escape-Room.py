@@ -104,7 +104,7 @@ while True:
     elif Choice_1 == "look down" and Choice_2 == "inspect":
         print("You kneel down and start feeling around the floor for something interesting. You remove a loose brick and to your surprise there is a wrench hidden in there. You decide this could help so you take the wrench and replace the brick.")
         inventory = inventory + "wrench"
-        print("You found a prison outfit. You can use it when the hint to use the prison outfit appears in the dialogue")
+        print("You found a wrench. You can use it when the hint to use the wrench appears in the dialogue")
 
     else:
         print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, you can say, \"Use bat on baseball\"")
@@ -118,3 +118,4 @@ while True:
 # You toss the prisoner outfit in the toilet now it's gross so you just leave it in there
 # Flush the Toilet
 #  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
+#  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier to open the vent. Oh thats right, you didn't get the shiv 😂😂😂😂😂 and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
