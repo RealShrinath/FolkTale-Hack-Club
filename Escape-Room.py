@@ -1,4 +1,5 @@
 #These plugins are for exiting and delaying text.
+#Go ask if its too hard and hints are necessary
 
 import time 
 import sys
@@ -41,78 +42,79 @@ steps = ""
 
 # I was stuck on this point for a pretty long time/ was procrastinating this because I wasn't proficient in while loops. I sort of know what to do now.
 
-# I don't know what the limitations are to spaces so the code is a bi t ugly
 # Add step 1 for when they 
 
 while True:
     print("What would you like to do?")
-    Choice_1 = input("Just type: Look up, Look down, Look left, Look right, or look forward to begin. When valid, you may also use the inspect command")
+    Choice_1 = input("Just type: Look up, Look down, Look left, Look right, or look forward to begin. When valid, you may also use the inspect command").lower().strip
 
-    if Choice_1 == "Look up":
+    if Choice_1 == "look up":
         print("You look at the tall ceilings, 15 feet above you there is a loose vent. You jump up to check your reach to no avail.")
-        continue
-    elif Choice_1 == "Look left":
+
+    elif Choice_1 == "look left":
         print("You look to the left and see a big metal door before you. You don't remember coming through it.")
 
-    elif Choice_1 == "Look right":
+    elif Choice_1 == "look right":
         print("You look to the right and see a mirror above a sink, and notice a pipe attached to the sink")
 
-    elif Choice_1 == "Look forward":
+    elif Choice_1 == "look forward":
         print("You look in front of you and wonder why the toilet is so close to the bed. You think to yourself atleast there is a pillow")
 
-    elif Choice_1 == "Look down":
+    elif Choice_1 == "look down":
         print("You look down and see a deteriorating floor made of stone bricks.")
 
-
     else:
-        print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, to execute this command, type \"Inspect\"")
-    continue
+        print("That is not a valid option. You can either Look in one of the directions,. You may also use an object from your inventory on an item you find. For example, to execute this command, type \"Use ____\"")
+        continue
 
-    Choice_2 = input("What would you like to do?")
+# Why does the continue go inside the else and not outside, doesn't continue apply to this
 
-    if Choice_1 == "Look up" and Choice_2 == "Inspect vent":
+    Choice_2 = input("What would you like to do?").strip().lower()
+
+    if Choice_1 == "look up" and Choice_2 == "inspect":
             print("The vent is too far away to see clearly, it appears to be loose")
-    continue
 
-    if Choice_1 == "Look left" and Choice_2 == "Inspect door":
+    elif Choice_1 == "look left" and Choice_2 == "inspect":
             print("You take a closer look at the door,  it is four inches of solid metal, probably not going to be your best escape route.")
-    continue
 
-    if Choice_1 == "Look right" and Choice_2 == "Inspect mirror":
+    elif Choice_1 == "look right" and Choice_2 == "inspect mirror":
         print("Looking in the mirror you realize it has been a while since you last showered. WAIT What's that you see sticking out of the mirror? You pick up a rusty nail file. You begin to start filing your nails to pass the time")
         inventory = inventory + "nail file"
         print("You found a nail file! You can use it when the hint to use the nail file appears in the dialogue")
-    continue
 
-    if Choice_1 == "Look right" and Choice_2 == "Inspect sink":
+    elif Choice_1 == "look right" and Choice_2 == "inspect":
         print("You turn the knobs on the sink, no water comes out.")
-    continue
 
-    if Choice_1 == "Look right" and Choice_2 == "Inspect pipe":
+    elif Choice_1 == "look right" and Choice_2 == "inspect":
         print("There is no waterflow, you wonder why noone maintains these facilities.")
-    continue
 
-    if Choice_1 == "Look Forward" and Choice_2 == "Inspect toilet":
+    elif Choice_1 == "look Forward" and Choice_2 == "inspect":
         print("You try to flush the toilet nothing happens.")
-    continue
 
-    if Choice_1 == "Look Forward" and Choice_2 == "Inspect pillow":
+    elif Choice_1 == "look Forward" and Choice_2 == "inspect pillow":
         print("You lay on the bed and rest your head on the pillow. oww. there was something sharp in there. You remove the pillow case and find a sharp shive inside. You think to yourself that you wouldn't want to get caught with this.")
         inventory = inventory + "shiv"
         print("You found a shiv! You can use it when the hint to use the shiv appears in the dialogue")
-    continue
 
-    if Choice_1 == "Look Forward" and Choice_2 == "Inspect bed":
+    elif Choice_1 == "look forward" and Choice_2 == "inspect bed":
         print(" You find a prison outfit under the bed and pick it up. You wonder who's it is")
         inventory = inventory + "prison outfit"
         print("You found a prison outfit. You can use it when the hint to use the prison outfit appears in the dialogue")
-    continue
 
-    if Choice_1 == "Look down" and Choice_2 == "Inspect floor":
+    elif Choice_1 == "look down" and Choice_2 == "inspect":
         print("You kneel down and start feeling around the floor for something interesting. You remove a loose brick and to your surprise there is a wrench hidden in there. You decide this could help so you take the wrench and replace the brick.")
-        inventory = inventory + "shiv"
-    continue
+        inventory = inventory + "wrench"
+        print("You found a prison outfit. You can use it when the hint to use the prison outfit appears in the dialogue")
 
     else:
         print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, you can say, \"Use bat on baseball\"")
-    continue
+        continue
+
+# This is where the escape route section actually starts
+
+# Use wrench on pipe
+# You take the wrench and begin turning the nuts holding it. You turn the nuts 4 times to the right. You hear water starting to flow through the pipes again.
+# Throw prisoner outfit in toilets
+# You toss the prisoner outfit in the toilet now it's gross so you just leave it in there
+# Flush the Toilet
+#  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
