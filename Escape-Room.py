@@ -1,12 +1,17 @@
 #These plugins are for exiting and delaying text.
 #Go ask if its too hard and hints are necessary
+#I prob have to be better with github :()
 
 import time 
 import sys
 
+hint = 4
+
 print("Welcome to escape room!")
 
 # This is to switch modes for when I decide to add on to this project if I decide to ever do.
+
+
 
 while True:
     room = input("What room would you like to escape from? (Jail Cell, Office, Car, or Garage)").strip().lower()
@@ -42,6 +47,10 @@ steps = ""
 
 # I was stuck on this point for a pretty long time/ was procrastinating this because I wasn't proficient in while loops. I sort of know what to do now.
 
+<<<<<<< HEAD
+# I don't know what the limitations are to spaces so the code is a bi bt ugly
+=======
+>>>>>>> c32fdb880ec273b665b710775cbb11e5a90f9b67
 # Add step 1 for when they 
 
 while True:
@@ -106,11 +115,41 @@ while True:
         inventory = inventory + "wrench"
         print("You found a wrench. You can use it when the hint to use the wrench appears in the dialogue")
 
+    elif Choice_1 == "look forward" and Choice_2 == use wrench and inventory has wrench:
+        print("You take out you wrench and start turning the nuts holding the pipe. You turn the nuts 4 times to the right. You hear water starting to flow through the pipes again.")
+        step = step + 1
+
+    elif Choice_1 == "look forward" and Choice_2 == throw prison garments in toilet and inventory has prison garments and step 1 is finished:
+        print("You toss the prisoner outfit in the toilet now it's gross so you just leave it in there")
+        step = step + 2
+
+    elif Choice_1 == "look forward" and Choice_2 == "flush toilet" and step has 1 and 2 and inventory has shiv:
+        print("You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer.")
+
+    elif Choice_1 == "look forward" and Choice_2 == "flush toilet" and step has 1 and 2 and inventory has shiv:
+        print("You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you didn't retrieve from earlier to open the vent. Oh that's right, you didn't get the shiv 😂😂😂. You feel the water above you nose. You attempt to open the vent with your imagination, but that doesn't seem to work. You drown all alone in an empty,moldy cell. Congratulations on your death 😂😂. It took you __ lines to become a loser. Send back to lobby")
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have wrench:
+        hint = hint - 1
+        print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have prison garments:
+        hint = hint - 1
+        print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")")
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have shiv and step doesn't have one:
+        print("If only the wrench you have in your pocket could help you escape. 🤔🤔🤔")
+        print("Who knows, it might even be helpful to have a conveniently placed sharp object that could help you escape. I'm just saying tho.")
+        print(f"You have {hint} hints left")
+
+    
+
+
+
     else:
         print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, you can say, \"Use bat on baseball\"")
         continue
 
 # This is where the escape route section actually starts
+
 
 # Use wrench on pipe
 # You take the wrench and begin turning the nuts holding it. You turn the nuts 4 times to the right. You hear water starting to flow through the pipes again.
@@ -118,4 +157,4 @@ while True:
 # You toss the prisoner outfit in the toilet now it's gross so you just leave it in there
 # Flush the Toilet
 #  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
-#  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier to open the vent. Oh thats right, you didn't get the shiv 😂😂😂😂😂 and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
+#  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you didn't retrieve from earlier to open the vent. Oh that's right, you didn't get the shiv 😂😂😂. You feel the water above you nose. You attempt to open the vent with your imagination, but that doesn't seem to work. You drown all alone in an empty,moldy cell. Congratulations on your death 😂😂. It took you __ lines to become a loser. Send back to lobby
