@@ -5,26 +5,32 @@ import time
 import sys
 
 print("Welcome to escape room!")
+time.sleep(0.7)
 
 # This is to switch modes for when I decide to add on to this project if I decide to ever do.
 
 while True:
     room = input("What room would you like to escape from? (Jail Cell, Office, Car, or Garage)").strip().lower()
     if room == "jail cell":
+        time.sleep(0.5)
         print("Are you ready? Then let's start!")
         break
     if room == "office":
+        time.sleep(0.5)
         print("Oops! It appears that option isn't available yet.")
         
         continue
     if room == "car":
+        time.sleep(0.5)
         print("Oops! It appears that option isn't available yet.")
         continue
 
     if room == "car":
+        time.sleep(0.5)
         print("Oops! It appears that option isn't available yet.")
         continue
     else:
+        time.sleep(0.5)
         print("That is not a valid option, please try again")
         continue
 print()
@@ -32,8 +38,15 @@ print()
 
 #quit = "quit"
 #sys.exit()
-
-print("You wake up with a sharp pain, laying on a frigid brick floor.  A musty smell of an old basement runs through your nose. You have no idea where you are  or how you got here. As you look around you are filled with a sense of claustrophobia as you feel the tightly spaced walls of a cell. You've never been to prison or broke the law before. You start screaming and shouting and banging on the walls. As the last of your energy is drained in the panic, you sit back down and notice the complete and utter silence. There is noone here to help you. You must save yourself.")
+time.sleep(2)
+print("You wake up with a sharp pain, laying on a frigid brick floor.  A musty smell of an old basement runs through your nose. You have no idea where you are  or how you got here. ")
+print()
+time.sleep(2)
+print("As you look around you are filled with a sense of claustrophobia as you feel the tightly spaced walls of a cell. You've never been to prison or broke the law before.") 
+print()
+time.sleep(2)
+print("You start screaming and shouting and banging on the walls. As the last of your energy is drained in the panic, you sit back down and notice the complete and utter silence. There is noone here to help you. You must save yourself.")
+time.sleep(2)
 print()
 
 inventory = ""
@@ -46,7 +59,9 @@ steps = ""
 
 while True:
     print("What would you like to do?")
-    Choice_1 = input("Just type: Look up, Look down, Look left, Look right, or look forward to begin. When valid, you may also use the inspect command").lower().strip
+    time.sleep(0.5)
+    Choice_1 = input("Just type: Look up, Look down, Look left, Look right, or look forward to begin. When valid, you may also use the inspect command").lower().strip()
+    time.sleep(1)
 
     if Choice_1 == "look up":
         print("You look at the tall ceilings, 15 feet above you there is a loose vent. You jump up to check your reach to no avail.")
@@ -68,11 +83,28 @@ while True:
         continue
 
 # Why does the continue go inside the else and not outside, doesn't continue apply to this
-
+    time.sleep(2)
     Choice_2 = input("What would you like to do?").strip().lower()
+    time.sleep(0.5)
+
+    if Choice_2 == "look up":
+        print("You look at the tall ceilings, 15 feet above you there is a loose vent. You jump up to check your reach to no avail.")
+
+    elif Choice_2 == "look left":
+        print("You look to the left and see a big metal door before you. You don't remember coming through it.")
+
+    elif Choice_2 == "look right":
+        print("You look to the right and see a mirror above a sink, and notice a pipe attached to the sink")
+
+    elif Choice_2 == "look forward":
+        print("You look in front of you and wonder why the toilet is so close to the bed. You think to yourself atleast there is a pillow")
+
+    elif Choice_2 == "look down":
+        print("You look down and see a deteriorating floor made of stone bricks.")
 
     if Choice_1 == "look up" and Choice_2 == "inspect":
             print("The vent is too far away to see clearly, it appears to be loose")
+
 
     elif Choice_1 == "look left" and Choice_2 == "inspect":
             print("You take a closer look at the door,  it is four inches of solid metal, probably not going to be your best escape route.")
@@ -109,7 +141,7 @@ while True:
     else:
         print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, you can say, \"Use bat on baseball\"")
         continue
-
+    time.sleep(2)
 # This is where the escape route section actually starts
 
 # Use wrench on pipe
