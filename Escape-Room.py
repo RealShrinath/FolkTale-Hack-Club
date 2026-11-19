@@ -41,9 +41,9 @@ print()
 print("You wake up with a sharp pain, laying on a frigid brick floor.  A musty smell of an old basement runs through your nose. You have no idea where you are  or how you got here. As you look around you are filled with a sense of claustrophobia as you feel the tightly spaced walls of a cell. You've never been to prison or broke the law before. You start screaming and shouting and banging on the walls. As the last of your energy is drained in the panic, you sit back down and notice the complete and utter silence. There is noone here to help you. You must save yourself.")
 print()
 
-inventory = ""
+inventory = [""]
 # This is to keep track of all the progress they have gotten
-steps = ""
+step = [""]
 
 # I was stuck on this point for a pretty long time/ was procrastinating this because I wasn't proficient in while loops. I sort of know what to do now.
 
@@ -137,7 +137,7 @@ while True:
         print("Who knows, it might even be helpful to have a conveniently placed sharp object that could help you escape. I'm just saying tho.")
         print(f"You have {hint} hints left")
 
-    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory has shiv and step doesn't have one and hint >= 1:
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory has shiv and if 1 not in step and hint >= 1:
         hint = hint - 1 
         print("If only the wrench you have in your pocket could help you escape. 🤔🤔🤔")
         print(f"You have {hint} hints left.")
