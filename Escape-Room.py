@@ -47,10 +47,6 @@ steps = ""
 
 # I was stuck on this point for a pretty long time/ was procrastinating this because I wasn't proficient in while loops. I sort of know what to do now.
 
-<<<<<<< HEAD
-# I don't know what the limitations are to spaces so the code is a bi bt ugly
-=======
->>>>>>> c32fdb880ec273b665b710775cbb11e5a90f9b67
 # Add step 1 for when they 
 
 while True:
@@ -151,7 +147,9 @@ while True:
         print("If only you could do something to block the water flow of the toilet. 🤔🤔🤔 ")
         print("Who knows, it might even be helpful to have a conveniently placed sharp object that could help you escape. I'm just saying tho.")
 
-    elif Choice_1 =
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory has shiv and step doesn't have two and hint >= 1:
+        hint = hint - 1
+        print("If only you could do something to block the water flow of the toilet. 🤔🤔🤔 ")
 
     elif Choice_1 == "hint" or Choice_2 == "hint" and hint == 0:
         print("You have run out of hint")
