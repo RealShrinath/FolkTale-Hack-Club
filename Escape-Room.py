@@ -129,16 +129,32 @@ while True:
     elif Choice_1 == "look forward" and Choice_2 == "flush toilet" and step has 1 and 2 and inventory has shiv:
         print("You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you didn't retrieve from earlier to open the vent. Oh that's right, you didn't get the shiv 😂😂😂. You feel the water above you nose. You attempt to open the vent with your imagination, but that doesn't seem to work. You drown all alone in an empty,moldy cell. Congratulations on your death 😂😂. It took you __ lines to become a loser. Send back to lobby")
 
-    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have wrench:
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have wrench and hint >= 1:
         hint = hint - 1
         print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")
-    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have prison garments:
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have prison garments and hint >= 1:
         hint = hint - 1
         print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")")
-    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have shiv and step doesn't have one:
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have shiv and step doesn't have one and hint >= 1:
+        hint = hint - 1
         print("If only the wrench you have in your pocket could help you escape. 🤔🤔🤔")
         print("Who knows, it might even be helpful to have a conveniently placed sharp object that could help you escape. I'm just saying tho.")
         print(f"You have {hint} hints left")
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory has shiv and step doesn't have one and hint >= 1:
+        hint = hint - 1 
+        print("If only the wrench you have in your pocket could help you escape. 🤔🤔🤔")
+        print(f"You have {hint} hints left.")
+    
+    elif Choice_1 == "hint" or Choice_2 == "hint" and inventory doesn't have shiv and step doesn't have two and hint >= 1:
+        hint = hint - 1
+        print("If only you could do something to block the water flow of the toilet. 🤔🤔🤔 ")
+        print("Who knows, it might even be helpful to have a conveniently placed sharp object that could help you escape. I'm just saying tho.")
+
+    elif Choice_1 =
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and hint == 0:
+        print("You have run out of hint")
 
     
 
