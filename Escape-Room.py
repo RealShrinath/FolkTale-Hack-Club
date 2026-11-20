@@ -10,13 +10,13 @@ hint = 4
 count = 0
 
 print("Welcome to escape room!")
-time.sleep(0.7)
 
 # This is to switch modes for when I decide to add on to this project if I decide to ever do.
 
 
 
 while True:
+    time.sleep(0.7)
     room = input("What room would you like to escape from? (Jail Cell, Office, Car, or Garage)").strip().lower()
     if room == "jail cell":
         time.sleep(0.5)
@@ -70,7 +70,7 @@ step = [""]
 while True:
     print("What would you like to do?")
     time.sleep(0.5)
-    Choice_1 = input("Just type: Look up, Look down, Look left, Look right, or look forward to begin. When valid, you may also use the inspect command").lower().strip()
+    Choice_1 = input("Just type: Look up, Look down, Look left, Look right, or look forward to begin. When valid, you may also use the inspect command: ").lower().strip()
     time.sleep(1)
 
     if Choice_1 == "look up":
@@ -93,9 +93,8 @@ while True:
         continue
 
 # Why does the continue go inside the else and not outside, doesn't continue apply to this
-<<<<<<< HEAD
     time.sleep(2)
-    Choice_2 = input("What would you like to do?").strip().lower()
+    Choice_2 = input("What would you like to do?: ").strip().lower()
     time.sleep(0.5)
 
     if Choice_2 == "look up":
@@ -112,15 +111,6 @@ while True:
 
     elif Choice_2 == "look down":
         print("You look down and see a deteriorating floor made of stone bricks.")
-=======
-
-
-# This contains all the inspect sequences.
-
-    Choice_2 = input("What would you like to do?").strip().lower()
-#count = count + 1
-#The reason I didnt put the count here is because it would add a count even when all the person did was type something wrong.
->>>>>>> d1b883482e4bbb0fff9b3c949b090299cad47ff6
 
 
 
@@ -130,11 +120,7 @@ while True:
             count = count + 1
 
 
-<<<<<<< HEAD
-    elif Choice_1 == "look left" and Choice_2 == "inspect":
-=======
     elif Choice_1 == "look left" and Choice_2 == "inspect door":
->>>>>>> d1b883482e4bbb0fff9b3c949b090299cad47ff6
             print("You take a closer look at the door,  it is four inches of solid metal, probably not going to be your best escape route.")
             count = count + 1
 
@@ -229,7 +215,7 @@ while True:
     elif Choice_1 == "hint" or Choice_2 == "hint" and "prison_clothes" not in inventory and hint >= 1:
         count = count + 2
         hint = hint - 1
-        print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")")
+        print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")
 
 
     elif Choice_1 == "hint" or Choice_2 == "hint" and shiv not in inventory and 1 not in step and hint >= 1:
@@ -266,18 +252,4 @@ while True:
 
     else:
         print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, you can say, \"Use bat on baseball\"")
-<<<<<<< HEAD
         continue
-    time.sleep(2)
-# This is where the escape route section actually starts
-
-# Use wrench on pipe
-# You take the wrench and begin turning the nuts holding it. You turn the nuts 4 times to the right. You hear water starting to flow through the pipes again.
-# Throw prisoner outfit in toilets
-# You toss the prisoner outfit in the toilet now it's gross so you just leave it in there
-# Flush the Toilet
-#  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
-#  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier to open the vent. Oh thats right, you didn't get the shiv 😂😂😂😂😂 and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
-=======
-        continue
->>>>>>> d1b883482e4bbb0fff9b3c949b090299cad47ff6
