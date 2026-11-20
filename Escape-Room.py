@@ -32,7 +32,7 @@ while True:
         print("Oops! It appears that option isn't available yet.")
         continue
 
-    if room == "car":
+    if room == "garage":
         time.sleep(0.5)
         print("Oops! It appears that option isn't available yet.")
         continue
@@ -206,8 +206,9 @@ while True:
         count = count + 999999999999999999999999999999999999699999999979999999999999999999999999999999999999
         sys.exit()
 
+# Had to use chatgpt here too. I could not for my life figure out why this wasn't working
 
-    elif Choice_1 == "hint" or Choice_2 == "hint" and "wrench" not in inventory and hint >= 1:
+    elif (Choice_1 == "hint" or Choice_2 == "hint") and "wrench" not in inventory and hint >= 1:
         count = count + 2
         hint = hint - 1
         print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")
