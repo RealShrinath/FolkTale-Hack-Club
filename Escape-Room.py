@@ -1,13 +1,20 @@
 #These plugins are for exiting and delaying text.
 #Go ask if its too hard and hints are necessary
+#I prob have to be better with github :()
+#Have to do all the imported time sequences
 
 import time 
 import sys
+
+hint = 4
+count = 0
 
 print("Welcome to escape room!")
 time.sleep(0.7)
 
 # This is to switch modes for when I decide to add on to this project if I decide to ever do.
+
+
 
 while True:
     room = input("What room would you like to escape from? (Jail Cell, Office, Car, or Garage)").strip().lower()
@@ -49,13 +56,16 @@ print("You start screaming and shouting and banging on the walls. As the last of
 time.sleep(2)
 print()
 
-inventory = ""
+inventory = [""]
 # This is to keep track of all the progress they have gotten
-steps = ""
+step = [""]
 
 # I was stuck on this point for a pretty long time/ was procrastinating this because I wasn't proficient in while loops. I sort of know what to do now.
 
 # Add step 1 for when they 
+#inventory.append()
+
+#This contains all the basic directional sequences.
 
 while True:
     print("What would you like to do?")
@@ -79,10 +89,11 @@ while True:
         print("You look down and see a deteriorating floor made of stone bricks.")
 
     else:
-        print("That is not a valid option. You can either Look in one of the directions,. You may also use an object from your inventory on an item you find. For example, to execute this command, type \"Use ____\"")
+        print("That is not a valid option. You can either look in one of the directions, ask for a hint, inspect something in the room, or you may also use an object from your inventory on an item you find. For example, to execute this command, type \"Use ____\"")
         continue
 
 # Why does the continue go inside the else and not outside, doesn't continue apply to this
+<<<<<<< HEAD
     time.sleep(2)
     Choice_2 = input("What would you like to do?").strip().lower()
     time.sleep(0.5)
@@ -101,45 +112,161 @@ while True:
 
     elif Choice_2 == "look down":
         print("You look down and see a deteriorating floor made of stone bricks.")
+=======
 
-    if Choice_1 == "look up" and Choice_2 == "inspect":
+
+# This contains all the inspect sequences.
+
+    Choice_2 = input("What would you like to do?").strip().lower()
+#count = count + 1
+#The reason I didnt put the count here is because it would add a count even when all the person did was type something wrong.
+>>>>>>> d1b883482e4bbb0fff9b3c949b090299cad47ff6
+
+
+
+
+    if Choice_1 == "look up" and Choice_2 == "inspect vent":
             print("The vent is too far away to see clearly, it appears to be loose")
+            count = count + 1
 
 
+<<<<<<< HEAD
     elif Choice_1 == "look left" and Choice_2 == "inspect":
+=======
+    elif Choice_1 == "look left" and Choice_2 == "inspect door":
+>>>>>>> d1b883482e4bbb0fff9b3c949b090299cad47ff6
             print("You take a closer look at the door,  it is four inches of solid metal, probably not going to be your best escape route.")
+            count = count + 1
+
 
     elif Choice_1 == "look right" and Choice_2 == "inspect mirror":
         print("Looking in the mirror you realize it has been a while since you last showered. WAIT What's that you see sticking out of the mirror? You pick up a rusty nail file. You begin to start filing your nails to pass the time")
-        inventory = inventory + "nail file"
+        inventory.append("nail file")
         print("You found a nail file! You can use it when the hint to use the nail file appears in the dialogue")
+        count = count + 1
 
-    elif Choice_1 == "look right" and Choice_2 == "inspect":
+
+    elif Choice_1 == "look right" and Choice_2 == "inspect sink":
         print("You turn the knobs on the sink, no water comes out.")
+        count = count + 1
 
-    elif Choice_1 == "look right" and Choice_2 == "inspect":
+
+    elif Choice_1 == "look right" and Choice_2 == "inspect pipe":
         print("There is no waterflow, you wonder why noone maintains these facilities.")
+        count = count + 1
 
-    elif Choice_1 == "look Forward" and Choice_2 == "inspect":
+
+    elif Choice_1 == "look forward" and Choice_2 == "inspect toilet":
         print("You try to flush the toilet nothing happens.")
+        count = count + 1
 
-    elif Choice_1 == "look Forward" and Choice_2 == "inspect pillow":
-        print("You lay on the bed and rest your head on the pillow. oww. there was something sharp in there. You remove the pillow case and find a sharp shive inside. You think to yourself that you wouldn't want to get caught with this.")
-        inventory = inventory + "shiv"
+
+    elif Choice_1 == "look forward" and Choice_2 == "inspect pillow":
+        print("You lay on the bed and rest your head on the pillow. oww. there was something sharp in there. You remove the pillow case and find a sharp shiv inside. You think to yourself that you wouldn't want to get caught with this.")
+        inventory.append("shiv")
         print("You found a shiv! You can use it when the hint to use the shiv appears in the dialogue")
+        count = count + 1
+
 
     elif Choice_1 == "look forward" and Choice_2 == "inspect bed":
         print(" You find a prison outfit under the bed and pick it up. You wonder who's it is")
-        inventory = inventory + "prison outfit"
+        inventory.append("prison outfit")
         print("You found a prison outfit. You can use it when the hint to use the prison outfit appears in the dialogue")
+        count = count + 1
 
-    elif Choice_1 == "look down" and Choice_2 == "inspect":
+
+    elif Choice_1 == "look down" and Choice_2 == "inspect floor" or "inspect bricks" or "inspect brick":
         print("You kneel down and start feeling around the floor for something interesting. You remove a loose brick and to your surprise there is a wrench hidden in there. You decide this could help so you take the wrench and replace the brick.")
-        inventory = inventory + "wrench"
+        inventory.append("wrench")
         print("You found a wrench. You can use it when the hint to use the wrench appears in the dialogue")
+        count = count + 1
+
+# This contains all the step sequences
+
+    elif Choice_1 == "look forward" and Choice_2 == "use wrench" and "wrench" in inventory:
+        print("You take out you wrench and start turning the nuts holding the pipe. You turn the nuts 4 times to the right. You hear water starting to flow through the pipes again.")
+        step.append("1")
+        count = count + 1
+
+
+    elif Choice_1 == "look forward" and Choice_2 == "use prison outfit" and "prison outfit" in inventory and 1 in step:
+        print("You toss the prisoner outfit in the toilet now it's gross so you just leave it in there")
+        step.append("2")
+        count = count + 1
+
+
+
+# These are the escape "Cutscenes"
+
+    elif Choice_1 == "look forward" and Choice_2 == "flush toilet" and 1 in step and 2 in step and "shiv" in inventory:
+        count = count + 1
+        print(f"You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you {count} lines to figure out the answer.")
+        sys.exit()
+
+
+
+
+    elif Choice_1 == "look forward" and Choice_2 == "flush toilet" and 1 in step and 2 in step and "shiv" in inventory:
+        count = count + 1
+        print(f"You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you didn't retrieve from earlier to open the vent. Oh that's right, you didn't get the shiv 😂😂😂. You feel the water above you nose. You attempt to open the vent with your imagination, but that doesn't seem to work. You drown all alone in an empty,moldy cell. Congratulations on your death 😂😂. It took you {count} lines to become a loser. Send back to lobby")
+        sys.exit()
+
+
+# After this point, all the hints are here
+
+    elif Choice_1 == "quit" or Choice_2 == "quit":
+        print("You want to quit? What a loser! 😂🫵")
+        count = count + 999999999999999999999999999999999999699999999979999999999999999999999999999999999999
+        sys.exit()
+
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and "wrench" not in inventory and hint >= 1:
+        count = count + 2
+        hint = hint - 1
+        print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")
+
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and "prison_clothes" not in inventory and hint >= 1:
+        count = count + 2
+        hint = hint - 1
+        print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")")
+
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and shiv not in inventory and 1 not in step and hint >= 1:
+        count = count + 2
+        hint = hint - 1
+        print("If only the wrench you have in your pocket could help you escape. 🤔🤔🤔")
+        print("Who knows, it might even be helpful to have a conveniently placed sharp object that could help you escape. I'm just saying tho.")
+        print(f"You have {hint} hints left")
+
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and "shiv" in inventory and 1 not in step and hint >= 1:
+        count = count + 2
+        hint = hint - 1 
+        print("If only the wrench you have in your pocket could help you escape. 🤔🤔🤔")
+        print(f"You have {hint} hints left.")
+
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and "shiv" not in inventory and 2 not in step and hint >= 1:
+        count = count + 2
+        hint = hint - 1
+        print("If only you could do something to block the water flow of the toilet. 🤔🤔🤔 ")
+        print("Who knows, it might even be helpful to have a conveniently placed sharp object that could help you escape. I'm just saying tho.")
+
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and "shiv" in inventory and 2 not in step and hint >= 1:
+        count = count + 2
+        hint = hint - 1
+        print("If only you could do something to block the water flow of the toilet. 🤔🤔🤔 ")
+
+
+    elif Choice_1 == "hint" or Choice_2 == "hint" and hint == 0:
+        print("You have run out of hints")
+
 
     else:
         print("That is not a valid option. You can either Look in one of the directions, or inspect an object. You may also use an object from your inventory on an item you find. For example, you can say, \"Use bat on baseball\"")
+<<<<<<< HEAD
         continue
     time.sleep(2)
 # This is where the escape route section actually starts
@@ -151,3 +278,6 @@ while True:
 # Flush the Toilet
 #  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
 #  You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you retrieved from earlier to open the vent. Oh thats right, you didn't get the shiv 😂😂😂😂😂 and release the vent cover you crawl in and escape through the ventilation system into safety. Congratulations on your escape. It took you x lines to figure out the answer. Send back to lobby
+=======
+        continue
+>>>>>>> d1b883482e4bbb0fff9b3c949b090299cad47ff6
