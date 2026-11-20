@@ -160,8 +160,9 @@ while True:
         print("You found a prison outfit. You can use it when the hint to use the prison outfit appears in the dialogue")
         count = count + 1
 
+# I had to use chatgpt for this one, I could not figure out why it was always evaluating to true. I'm sorry :(
 
-    elif Choice_1 == "look down" and Choice_2 == "inspect floor" or "inspect bricks" or "inspect brick":
+    elif Choice_1 == "look down" and Choice_2 in ["inspect floor", "inspect bricks", "inspect brick"]:
         print("You kneel down and start feeling around the floor for something interesting. You remove a loose brick and to your surprise there is a wrench hidden in there. You decide this could help so you take the wrench and replace the brick.")
         inventory.append("wrench")
         print("You found a wrench. You can use it when the hint to use the wrench appears in the dialogue")
@@ -171,13 +172,13 @@ while True:
 
     elif Choice_1 == "look forward" and Choice_2 == "use wrench" and "wrench" in inventory:
         print("You take out you wrench and start turning the nuts holding the pipe. You turn the nuts 4 times to the right. You hear water starting to flow through the pipes again.")
-        step.append("1")
+        step.append(1)
         count = count + 1
 
 
     elif Choice_1 == "look forward" and Choice_2 == "use prison outfit" and "prison outfit" in inventory and 1 in step:
         print("You toss the prisoner outfit in the toilet now it's gross so you just leave it in there")
-        step.append("2")
+        step.append(2)
         count = count + 1
 
 
@@ -192,7 +193,7 @@ while True:
 
 
 
-    elif Choice_1 == "look forward" and Choice_2 == "flush toilet" and 1 in step and 2 in step and "shiv" in inventory:
+    elif Choice_1 == "look forward" and Choice_2 == "flush toilet" and 1 in step and 2 in step and "shiv" not in inventory:
         count = count + 1
         print(f"You flush the toilet the prison garments are getting stuck in the toilet bowl and water is starting to fill up  the bowl. You flush it again more and more water begins coming through. It begins to overflow onto the floor something seems to be wrong and the water continues to fill the room until it goes over your head. You start to panic as the water reaches the ceiling. The water level rises until your head hits the vent. You think fast and pull out the shiv you didn't retrieve from earlier to open the vent. Oh that's right, you didn't get the shiv 😂😂😂. You feel the water above you nose. You attempt to open the vent with your imagination, but that doesn't seem to work. You drown all alone in an empty,moldy cell. Congratulations on your death 😂😂. It took you {count} lines to become a loser. Send back to lobby")
         sys.exit()
@@ -218,7 +219,7 @@ while True:
         print(f"Hmmm, if only there was a conveniently placed tool under the floor that could fix the water flow of the toilet 🤔🤔🤔. You have {hint} hints left")
 
 
-    elif Choice_1 == "hint" or Choice_2 == "hint" and shiv not in inventory and 1 not in step and hint >= 1:
+    elif Choice_1 == "hint" or Choice_2 == "hint" and "shiv" not in inventory and 1 not in step and hint >= 1:
         count = count + 2
         hint = hint - 1
         print("If only the wrench you have in your pocket could help you escape. 🤔🤔🤔")
